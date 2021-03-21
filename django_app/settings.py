@@ -28,7 +28,15 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
+    'pages.apps.PagesConfig',
+    'main.apps.MainConfig',
+    'users.apps.UsersConfig',
+    'django.contrib.sites', # for allauth
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
 ]
 
 MIDDLEWARE = [
