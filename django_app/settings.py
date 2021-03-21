@@ -131,3 +131,18 @@ STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 # Uncomment if you have extra static files and a directory in your GitHub repo.
 # If you don't have this directory and have this uncommented your build will fail
 # STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
+
+# The following three constants (AUTHENTICATION_BACKENDS, SITE_ID,
+# and LOGIN_REDIRECT_URL) are for django-allauth.
+AUTHENTICATION_BACKENDS = (
+    "django.contrib.auth.backends.ModelBackend",
+    "allauth.account.auth_backends.AuthenticationBackend",
+)
+
+SITE_ID = 1
+
+LOGIN_REDIRECT_URL = '/'
+
+AUTH_USER_MODEL = 'users.User'
+
+
